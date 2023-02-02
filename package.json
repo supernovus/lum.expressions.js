@@ -1,0 +1,29 @@
+{
+  "name": "@lumjs/expressions",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "exports":
+  {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/supernovus/lum.expressions.js.git"
+  },
+  "dependencies": 
+  {
+    "@lumjs/core": "^1.11.0"
+  },
+  "devDependencies":
+  {
+    "@lumjs/tests": "^1.8.0"
+  },
+  "scripts":
+  {
+    "test": "lumtest.js",
+    "build-docs": "jsdoc -c ./jsdoc.json"
+  }
+}
