@@ -1,10 +1,11 @@
-// Current test count.
-const plan = 32;
-// A new test instance.
-const t = require('@lumjs/tests').new({module, plan});
-
 // A common test suite
 const ts = require('./inc/common');
+
+// Current test count.
+const plan = ts.plan;
+
+// A new test instance.
+const t = require('@lumjs/tests').new({module, plan});
 
 // The classic defs from the original JS and PHP libs.
 // These pre-date the new defs being available.
@@ -17,10 +18,8 @@ const opDef =
   add: {precedence: 2, evaluate: true},
   mult: {precedence: 3, evaluate: true},
   negate: {precedence: 4, unary: true, evaluate: 'neg'},
-  sqrt: {precedence: 4, unary: true, evaluate: function (items)
-  {
-    return Math.sqrt(items[0]);
-  }},
+  sqrt: {precedence: 4, unary: true, 
+    evaluate: (items) => Math.sqrt(items[0])},
 };
 
 // Run the tests.

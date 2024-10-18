@@ -1,10 +1,11 @@
-// Current test count.
-const plan = 32;
-// A new test instance.
-const t = require('@lumjs/tests').new({module, plan});
-
 // A common test suite
 const ts = require('./inc/common');
+
+// Current test count.
+const plan = ts.plan;
+
+// A new test instance.
+const t = require('@lumjs/tests').new({module, plan});
 
 // The new shorter def for built-in operators.
 const opDef =
@@ -16,7 +17,7 @@ const opDef =
   add: true,
   mult: true,
   negate: 'neg',
-  sqrt: {precedence: 100, unary: true, evaluate: function (items)
+  sqrt: {precedence: 100, unary: true, evaluate(items)
   {
     return Math.sqrt(items[0]);
   }},

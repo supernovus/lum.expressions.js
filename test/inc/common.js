@@ -118,5 +118,5 @@ function run(t, expConf)
 
 module.exports =
 {
-  basicExps, looseInfix, toTypes, run, Exp,
+  basicExps, looseInfix, toTypes, run, Exp, plan: 32,
 }

@@ -1,6 +1,6 @@
 {
   "name": "@lumjs/expressions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "exports":
   {
@@ -19,7 +19,7 @@
   },
   "devDependencies":
   {
-    "@lumjs/tests": "^1.8.0"
+    "@lumjs/tests": "^2.0.0"
   },
   "scripts":
   {
